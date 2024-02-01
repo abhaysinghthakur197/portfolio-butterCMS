@@ -1,23 +1,24 @@
 import React from 'react'
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import me from '../assets/me.jpeg';
-import {Link} from "react-scroll";
+import { Link } from "react-scroll";
 import Image from 'react-bootstrap/Image';
 
 
 const Home = () => {
 
   const imageStyle = {
+    position: 'relative',
     borderRadius: '50%',
     width: '130px', // Set the desired width
     height: '110px',
-    transform: 'scale(3)', // This will make the image a circle; you can adjust the percentage for different levels of rounding
-    zIndex: '1',
-    position: 'relative'
+    transform: 'scale(3)', 
+    
+    zIndex: 0 // This will make the image a circle; you can adjust the percentage for different levels of rounding
   };
 
   return (
-    <div name="home" className='h-screen w-full bg-[#0a192f] mt-5'> 
+    <div name="home" className='h-screen w-full bg-[#0a192f] mt-5'>
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-between h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full">
           <h2 className="text-4xl sm:text-7ml font-bold text-white">
