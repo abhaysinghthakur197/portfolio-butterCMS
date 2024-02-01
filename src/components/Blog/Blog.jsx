@@ -39,9 +39,26 @@ const Blogs = () => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
+        responsive: [
+            {
+                breakpoint: 768, // Screen width less than 768px (sm)
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+            {
+                breakpoint: 992, // Screen width less than 992px (md)
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
+
+
     };
 
-    
+
+
 
     return (
         <div className='text-gray-300 bg-[#0a192f] py-10'>
@@ -53,8 +70,8 @@ const Blogs = () => {
             </div>
 
 
-            <div className=' w-2/4 m-auto'>
-                <div className="mt-10">
+            <div className=' w-2/4 m-auto '>
+                <div className="mt-10 ">
                     <Slider {...settings}>
                         {slides.map((index) => (
                             <div className="rounded-xl bg-white">
@@ -64,7 +81,7 @@ const Blogs = () => {
                                 <div className='flex flex-col justify-center items-center gap-4 p-4'>
                                     <h4 className='text-xl font-semibold'>{index.title1}</h4>
                                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum sequi sed alias consectetur at, quos ut ipsum. Omnis magni laboriosam adipisci, eaque pariatur culpa, atque perferendis rerum, tenetur impedit earum.</p>
-                                    <Button  className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md  rounded-ml bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer' > Read More</Button>
+                                    <Button className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md  rounded-ml bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer' > Read More</Button>
                                 </div>
                             </div>
                         ))}

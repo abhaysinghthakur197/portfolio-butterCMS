@@ -24,3 +24,7 @@
         hsla(242, 74%, 61%, 0.8)   
     )!important;
 }
+
+.slick-slide div {
+    margin: 0 25px;
+}

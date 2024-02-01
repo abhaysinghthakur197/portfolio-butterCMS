@@ -11,7 +11,9 @@ const Home = () => {
     borderRadius: '50%',
     width: '130px', // Set the desired width
     height: '110px',
-    transform: 'scale(3)' // This will make the image a circle; you can adjust the percentage for different levels of rounding
+    transform: 'scale(3)', // This will make the image a circle; you can adjust the percentage for different levels of rounding
+    zIndex: '1',
+    position: 'relative'
   };
 
   return (
